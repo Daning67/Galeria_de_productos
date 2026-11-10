@@ -15,7 +15,7 @@ export const productos = [
     nombre: 'Monitor Gamer 24" 144Hz',
     precio: 189.99,
     categoria: 'Tecnología',
-    imagen: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80'
+    imagen: 'https://res.cloudinary.com/dnwzi7il/image/upload/v1794286329/Monitor_Gamer_LG_UL_traGear.jpg'
   },
   {
     nombre: 'Ratón Ergonómico Óptico',
@@ -27,7 +27,7 @@ export const productos = [
     nombre: 'Lámpara de Mesa Inteligente',
     precio: 29.99,
     categoria: 'Hogar',
-    imagen: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=600&q=80'
+    imagen: 'https://res.cloudinary.com/dnwzi7il/image/upload/v1794286420/Lampe_LED_3-en-1_%C3%89clairage_design_%C3%A9tag%C3%A8re_plante_chargeur_sans_fil.jpg'
   },
   {
     nombre: 'Cafetera de Filtro Eléctrica',
@@ -45,13 +45,13 @@ export const productos = [
     nombre: 'Juego de Sartenes Antiadherentes',
     precio: 65.00,
     categoria: 'Hogar',
-    imagen: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80'
+    imagen: 'https://res.cloudinary.com/dnwzi7il/image/upload/v1794286554/CAROTE_-_Juego_de_26_ollas_y_sartenes_antiadherentes_Juego_de_cocina_de_inducci%C3%B3n_dise%C3%B1o_de_textur.jpg'
   },
   {
     nombre: 'Camiseta Básica de Algodón',
     precio: 18.50,
     categoria: 'Ropa',
-    imagen: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'
+    imagen: 'https://res.cloudinary.com/dnwzi7il/image/upload/v1794286472/descarga.jpg'
   },
   {
     nombre: 'Sudadera con Capucha Casual',
