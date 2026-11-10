@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Productos Interactiva</title>
+  </head>
+  <body>
+    <div class="contenedor-principal">
+      <header class="encabezado">
+        <h1 class="titulo-galeria">Galería de Productos</h1>
+      </header>
+
+      <section class="seccion-filtros" aria-label="Filtros de productos">
+        <div class="grupo-categorias">
+          <button type="button" class="btn-categoria activo" data-categoria="Todos">Todos</button>
+          <button type="button" class="btn-categoria" data-categoria="Tecnología">Tecnología</button>
+          <button type="button" class="btn-categoria" data-categoria="Hogar">Hogar</button>
+          <button type="button" class="btn-categoria" data-categoria="Ropa">Ropa</button>
+        </div>
+
+        <div class="grupo-precio">
+          <label for="precio-maximo" class="label-precio">Precio máximo:</label>
+          <input
+            type="number"
+            id="precio-maximo"
+            class="input-precio"
+            placeholder="Ej. 50"
+            min="0"
+            step="0.01"
+          />
+          <button type="button" id="btn-filtrar-precio" class="btn-filtrar">Filtrar por precio</button>
+          <button type="button" id="btn-limpiar-filtros" class="btn-limpiar">Limpiar filtros</button>
+        </div>
+
+        <p id="mensaje-error" class="mensaje-error" role="alert"></p>
+      </section>
+
+      <div class="barra-contador">
+        <p class="contador-texto">
+          Productos visibles: <span id="contador-productos">12</span>
+        </p>
+      </div>
+
+      <section id="galeria" class="galeria" aria-live="polite"></section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
