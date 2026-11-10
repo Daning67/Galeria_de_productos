@@ -9,6 +9,8 @@ const btnFiltrarPrecio = document.getElementById('btn-filtrar-precio');
 const btnLimpiarFiltros = document.getElementById('btn-limpiar-filtros');
 const mensajeError = document.getElementById('mensaje-error');
 const botonesCategoria = document.querySelectorAll('.btn-categoria');
+const btnMenu = document.getElementById('btn-menu');
+const navLinks = document.getElementById('nav-links');
 
 // Variables de estado para filtros combinados
 let categoriaActual = 'Todos';
@@ -58,7 +60,8 @@ function renderizarProductos(lista) {
             <span class="badge badge-${claseCategoria}">${producto.categoria}</span>
           </div>
           <div class="tarjeta-cuerpo">
-            <h2 class="tarjeta-nombre">${producto.nombre}</h2>
+            <h3 class="tarjeta-nombre">${producto.nombre}</h3>
+            <p class="tarjeta-descripcion">${producto.descripcion}</p>
             <p class="tarjeta-precio">$${producto.precio.toFixed(2)}</p>
           </div>
         </article>
@@ -134,6 +137,22 @@ function restablecerFiltros() {
   });
 
   aplicarFiltros();
+}
+
+// Configuración del menú hamburguesa responsive
+if (btnMenu && navLinks) {
+  btnMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('activo');
+    const estaAbierto = navLinks.classList.contains('activo');
+    btnMenu.setAttribute('aria-expanded', String(estaAbierto));
+  });
+
+  navLinks.querySelectorAll('a').forEach((enlace) => {
+    enlace.addEventListener('click', () => {
+      navLinks.classList.remove('activo');
+      btnMenu.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 // Configuración de escuchadores de eventos (addEventListener)
